@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "JetBrains Mono", "Noto Sans Thai", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom Palettes */
+  --color-midnight: #0B1120;
+  --color-portgore: var(--color-midnight);
+  --color-vistawhite: #F7F5F2;
+  
+  /* Vibrant Palette from Images */
+  --color-fireopal: #E3624A;
+  --color-cadetblue: #6094A3;
+  --color-goldenrod: #DB9E32;
+  --color-lavender: #8E88A3;
+  --color-muted-sage: #919D85;
+  --color-crimson: #B22026;
+  --color-dustyrose: #C496A1;
+  --color-jellybean: #3B899C;
+  
+  /* Semantic Aliases */
+  --color-pomegranate: var(--color-crimson);
+  --color-terracotta: var(--color-fireopal);
+  --color-brandyrose: var(--color-dustyrose);
+  --color-honeygold: var(--color-goldenrod);
+  
+  --color-purple-accent: var(--color-lavender);
+  --color-peach: #FFA96F;
+  --color-orange-accent: #FF8736;
+  
+  --color-hibiscus-red: #B13745;
+  --color-hibiscus-pink: #D36A7E;
+  --color-hibiscus-light: #F5B8BE;
+  --color-olive: #827122;
+  --color-dark-green: #3E3A19;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-[#F9F8F4] text-slate-900;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 3px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+  }
+
+  @keyframes shimmer-gold {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .bg-shimmer-gold {
+    background: linear-gradient(-45deg, #B8860B, #FFD700, #FDB931, #B8860B);
+    background-size: 300% 300%;
+    animation: shimmer-gold 3s ease infinite;
+  }
+}

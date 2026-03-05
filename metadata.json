@@ -1,0 +1,5 @@
+{
+  "name": "THAIMUNG FURNITURE MES",
+  "description": "A multi-tenant ERP system using React and Google Sheets as a backend with 3-tier security.",
+  "requestFramePermissions": []
+}
